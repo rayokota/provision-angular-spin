@@ -1,0 +1,12 @@
+---
+- name: Add PPA for Racket
+  apt_repository: repo='deb http://ppa.launchpad.net/plt/racket/ubuntu precise main'
+
+- name: Add PPA for Racket 
+  apt_repository: repo='deb-src http://ppa.launchpad.net/plt/racket/ubuntu precise main'
+ 
+- name: Update apt cache
+  apt: update_cache=yes
+ 
+- name: Install Racket
+  apt: pkg=racket force=yes
